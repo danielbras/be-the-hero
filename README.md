@@ -1,1 +1,1 @@
-## Aplicação be the Hero - Semana OmniStack 11.0
+## Aplicação Be the Hero - Semana OmniStack 11.0
