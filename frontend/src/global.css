@@ -33,10 +33,10 @@ form input {
 
 form textarea {
   width: 100%;
-  resize: vertical;
   min-width: 140px;
-  max-height: 450px;
+  height: 120px;
   min-height: 58px;
+  resize: vertical;
   color: #333;
   border: 1px solid #dcdce6;
   border-radius: 8px;
