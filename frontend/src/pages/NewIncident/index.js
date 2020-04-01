@@ -26,20 +26,16 @@ export default function NewIncident() {
       value,
     };
 
-    if (data.title !== "" && data.description !== "") {
-      try {
-        await api.post('incidents', data, {
-          headers: {
-            Authorization: ongId,
-          }
-        });
+    try {
+      await api.post('incidents', data, {
+        headers: {
+          Authorization: ongId,
+        }
+      });
 
-        history.push('/profile'); 
-      } catch (err) {
-        alert('Erro ao cadastrar caso, tente novamente.')
-      }
-    } else {
-      alert('Por favor informe o título do caso e a descrição.');
+      history.push('/profile'); 
+    } catch (err) {
+      alert('Erro ao cadastrar caso, tente novamente.')
     }
   }
   return (

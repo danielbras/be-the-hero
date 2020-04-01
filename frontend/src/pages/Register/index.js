@@ -21,17 +21,13 @@ export default function Register() {
 
     const data = { name, email, whatsapp, city, uf };
 
-    if(data.name !== "" && data.city !== "" && data.uf !== "" && data.email !== "") { 
-      try { 
-        const response = await api.post('ongs', data);
-        alert(`Seu ID de acesso ${response.data.id}`);
+    try { 
+      const response = await api.post('ongs', data);
+      alert(`Seu ID de acesso ${response.data.id}`);
 
-        history.push('/');
-      } catch (err) {
-        alert('Erro no cadastro, tente novamente.'); 
-      }
-    } else {
-      alert('Por favor, preencha todos os campos.'); 
+      history.push('/');
+    } catch (err) {
+      alert('Erro no cadastro, tente novamente.'); 
     }
   }
 
