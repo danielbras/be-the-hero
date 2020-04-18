@@ -8,7 +8,7 @@ const SessionController = require("./controllers/SessionController");
 const validateSession = require("./validators/Session");
 const validateOngCreate = require("./validators/OngCreate");
 const validateProfile = require("./validators/Profile");
-const validateIncident = require("./validators/IncidentCreate");
+const validateIncidentCreate = require("./validators/IncidentCreate");
 const validateIncidentIndex = require("./validators/IncidentIndex");
 const validateId = require("./validators/IncidentId");
 
@@ -25,8 +25,8 @@ routes.get("/incidents", validateIncidentIndex(), IncidentController.index);
 
 routes.post(
   "/incidents",
-  validateIncident.body(),
-  validateIncident.headers(),
+  validateIncidentCreate.body(),
+  validateIncidentCreate.headers(),
   IncidentController.create
 );
 
