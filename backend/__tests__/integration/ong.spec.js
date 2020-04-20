@@ -23,4 +23,16 @@ describe("ONG", () => {
     expect(response.body).toHaveProperty("id");
     expect(response.body.id).toHaveLength(8);
   });
+
+  it("should be able to create a new incident", async () => {
+    const response = await request(app)
+      .post("/incidents")
+      .set("authorization", "fc7731b8")
+      .send({
+        title: "Caso 5",
+        description: "Detalhes do caso",
+        value: 120,
+      });
+    expect(response.body).toHaveProperty("id");
+  });
 });
